@@ -2,13 +2,16 @@
 .BoardText {
   background: inherit;
   text-align: center;
-  font-style: normal;
+  font-style: bold;
   font-variant: small-caps;
   position:relative;
-  font-size: 30px;
+  font-size: 16px;
   font-family: fantasy, serif;
-  line-height: 45px;
-  color:white;
+  color: black;
+  top: 490px;
+  left: 620px;
+  width: 200px;
+  height: 100px;
 }
 
 body {
@@ -17,6 +20,12 @@ body {
   background-color: #88b1f2;
 
 }
+
+#blimp {
+  position: absolute;
+
+}
+
 
 .scene {
   height: 100vh;
