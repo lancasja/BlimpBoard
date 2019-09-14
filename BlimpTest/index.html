@@ -13,20 +13,55 @@
 
 <div id="scene" class="scene">
   <div data-depth="0" class="sky"></div>
-  <div data-depth="0.2"><img src="images/cloud1.png"></div>
-  <div data-depth="0.4"><img src="images/cloud2.png"></div>
-  <div data-depth="0.7"><img src="images/blimp.png"></div>
-  <div data-depth="0.2"><img src="images/skyline.png"></div>
-  <div data-depth="0"><img src="images/hills.png"></div>
+  <div data-depth="0.2" id="cloud1"></div>
+  <div data-depth="0.4" id="cloud2"></div>
+  <div data-depth="0.7" id="blimp"><img src="assets/blimp.png"></div>
+  <div data-depth="0.2" id="background"></div>
+  <div data-depth="0" id="foreground"></div>
 </div>
-
 
 </body>
 </html>
 
 <script>
-let scene = document.getElementById('scene');
+let Scene = document.getElementById('scene');
+
 let parallaxInstance = new Parallax(scene, {
   hoverOnly: false
 });
+
+let Cloud1 = ["assets/cloud1.png","assets/post_clouds1.gif"];
+let Cloud2 = ["assets/cloud2.png","assets/post_clouds2.gif"];
+let Foreground = ["assets/city_foreground.gif"];
+let Background = ["assets/city_background.gif"];
+
+
+function randomCloud1() {
+  random = Math.floor(Math.random() * Cloud1.length);
+    cloud1.innerHTML = '<img src="' + Cloud1[random] + '">';
+}
+
+function randomCloud2() {
+  random = Math.floor(Math.random() * Cloud2.length);
+    cloud2.innerHTML = '<img src="' + Cloud2[random] + '">';
+}
+
+function randomForeground() {
+  random = Math.floor(Math.random() * Foreground.length);
+    skyline.innerHTML = '<img src="' + Foreground[random] + '">';
+}
+
+function randomBackground() {
+  random = Math.floor(Math.random() * Hills.length);
+    hills.innerHTML = '<img src="' + Hills[random] + '">';
+}
+
+function randomDiorama() {
+  randomCloud1();
+  randomCloud2();
+  randomForeground();
+  randomBackground();
+}
+
+window.onload = randomDiorama;
 </script>
