@@ -18,6 +18,11 @@
 
     <!-- DOM CONTENT -->
 
+
+    <div class = "BoardText"> </div>
+
+
+
     <div id="scene" class="scene">
         <div data-depth="0" class="sky">
             <div class="canvas-interactive-wrapper">
@@ -34,13 +39,19 @@
       <div data-depth="0.2" id="background"></div>
       <div data-depth="0.7" id="blimp"><img src="assets/blimp.png"></div>
       <div data-depth="0.8" id="foreground" style="bottom:0px;"></div>
+      <div class = "BoardText"> </div>
+      <div data-depth="0" id="foreground"></div>
     </div>
+
 
 
     <!-- LIBRARIES & SCRIPTS -->
     <script src="js/lib/jquery-3.4.1.js"></script>
     <script src="js/lib/two.js"></script>
     <script src="js/index.js"></script>
+
+    <script src="js/generator.js"></script>
+
 
 
     <!-- PARALLAX AND RANDOM DIORAMA SCRIPTS -->
@@ -146,6 +157,7 @@ function setClass(element) {
 };
 
     </script>
+
 
 </body>
 </html>
