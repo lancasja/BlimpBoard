@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>BlimpBoard Parallax Text</title>
+<link rel="stylesheet" type="text/css" href="bboard.css"/>
+<script src="java.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/granim/2.0.0/granim.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+<!-- granim test -->
+<canvas id="canvas-image-blending"></canvas>
+
+<div id="scene" class="scene">
+  <div data-depth="0" class="sky"></div>
+  <div data-depth="0.2"><img src="images/cloud1.png"></div>
+  <div data-depth="-0.7"><img src="assets/east_bay.gif"></div>
+  <div data-depth="-0.7"><img src="assets/bay.gif"></div>
+  <div data-depth="-0.8"><img src="assets/city_background.gif"></div>
+  <div data-depth="-1"><img src="assets/city_foreground.gif"></div>
+</div>
+
+
+</body>
+</html>
+
+<script>
+    let scene = document.getElementById('scene');
+    let parallaxInstance = new Parallax(scene, {
+        hoverOnly: false
+    });
+</script>
