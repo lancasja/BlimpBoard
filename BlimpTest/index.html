@@ -22,6 +22,7 @@
 <!-- <canvas id="canvas-image-blending"> -->
 
 <div id="scene" class="scene">
+
     <div class="canvas-interactive-wrapper">
         <canvas id="canvas-interactive"></canvas>
         <div class="cta-wrapper">
@@ -30,14 +31,15 @@
             <a href="#orange-state" id="orange-state-cta">Orange state</a>
         </div>
     </div>
-  <!-- <div data-depth="0" class="sky"></div> -->
-  <div data-depth="-0.8"><img src="assets/east_bay.gif"></div>
-  <div data-depth="-0.8"><img src="assets/bay.gif"></div>
-  <div data-depth="-0.9"><img src="assets/city_background.gif"></div>
-  <div data-depth="-1"><img src="assets/city_foreground.gif"></div>
-  <div id="blimp" div data-depth="1.5"><img src="assets/blimp.gif" style="width: 600px; height: 1000px;"></div>
-</div>
 
+  <div data-depth="0" class="sky"></div>
+  <div data-depth="0.2" id="cloud1"></div>
+  <div data-depth="0.4" id="cloud2"></div>
+  <div data-depth="0.7" id="blimp"><img src="assets/blimp.png"></div>
+  <div data-depth="0.2" id="background"></div>
+  <div data-depth="0" id="foreground"></div>
+
+</div>
 
 </body>
 
@@ -100,5 +102,46 @@ function setClass(element) {
     $('.canvas-interactive-wrapper a').removeClass('active');
     $(element).addClass('active');
 };
+
+let Scene = document.getElementById('scene');
+
+let parallaxInstance = new Parallax(scene, {
+  hoverOnly: false
+});
+
+let Cloud1 = ["assets/cloud1.png","assets/post_clouds1.gif"];
+let Cloud2 = ["assets/cloud2.png","assets/post_clouds2.gif"];
+let Foreground = ["assets/city_foreground.gif"];
+let Background = ["assets/city_background.gif"];
+
+
+function randomCloud1() {
+  random = Math.floor(Math.random() * Cloud1.length);
+    cloud1.innerHTML = '<img src="' + Cloud1[random] + '">';
+}
+
+function randomCloud2() {
+  random = Math.floor(Math.random() * Cloud2.length);
+    cloud2.innerHTML = '<img src="' + Cloud2[random] + '">';
+}
+
+function randomForeground() {
+  random = Math.floor(Math.random() * Foreground.length);
+    skyline.innerHTML = '<img src="' + Foreground[random] + '">';
+}
+
+function randomBackground() {
+  random = Math.floor(Math.random() * Hills.length);
+    hills.innerHTML = '<img src="' + Hills[random] + '">';
+}
+
+function randomDiorama() {
+  randomCloud1();
+  randomCloud2();
+  randomForeground();
+  randomBackground();
+}
+
+window.onload = randomDiorama;
 
 </script>
