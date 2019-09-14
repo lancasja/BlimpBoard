@@ -1,14 +1,15 @@
 
 .BoardText {
-  background: inherit;
+  background:white;
   text-align: center;
-  font-style: normal;
+  font-style: bold;
   font-variant: small-caps;
   position:relative;
   font-size: 30px;
   font-family: fantasy, serif;
-  line-height: 45px;
-  color:white;
+  line-height: 30px;
+  color:darkblue;
+  max-width: inherit;
 }
 
 body {
