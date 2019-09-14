@@ -1,5 +1,6 @@
+
 .BoardText {
-  background: white;
+  background: inherit;
   text-align: center;
   font-style: normal;
   font-variant: small-caps;
@@ -7,4 +8,24 @@
   font-size: 30px;
   font-family: fantasy, serif;
   line-height: 45px;
+  color:white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #88b1f2;
+
+}
+
+.scene {
+  height: 90vh;
+  width: 100vw;
+  padding-top: 10%;
+  overflow: hidden;
+}
+
+.scene img  {
+  height: 100%;
+  width: 100%;
 }
