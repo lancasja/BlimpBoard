@@ -1,17 +1,20 @@
-var granimInstance = new Granim({
-    element: '#logo-canvas',
-    direction: 'left-right',
-    states : {
-        "default-state": {
-            gradients: [
-                ['#EB3349', '#F45C43'],
-                ['#FF8008', '#FFC837'],
-                ['#4CB8C4', '#3CD3AD'],
-                ['#24C6DC', '#514A9D'],
-                ['#FF512F', '#DD2476'],
-                ['#DA22FF', '#9733EE']
-            ],
-            transitionSpeed: 2000
-        }
-    }
-});
+// var granimInstance = new Granim({
+//     element: '#canvas-complex',
+//     direction: 'left-right',
+//     isPausedWhenNotInView: true,
+//     states : {
+//         "default-state": {
+//             gradients: [
+//                 [
+//                     { color: '#833ab4', pos: .2 },
+//                     { color: '#fd1d1d', pos: .8 },
+//                     { color: '#38ef7d', pos: 1 }
+//                 ], [
+//                     { color: '#40e0d0', pos: 0 },
+//                     { color: '#ff8c00', pos: .2 },
+//                     { color: '#ff0080', pos: .75 }
+//                 ],
+//             ]
+//         }
+//     }
+// });
