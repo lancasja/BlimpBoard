@@ -3,14 +3,14 @@
   background:white;
   text-align: center;
   font-style: bold;
-  font-variant: small-caps;
+  text-transform: uppercase;
   position:relative;
   font-size: 16px;
-  font-family: fantasy, serif;
+  font-family: Helvetica, serif;
   color: black;
-  top: 490px;
-  left: 620px;
-  width: 200px;
+  top: 540px;
+  left: 760px;
+  width: 210px;
   height: 100px;
 }
 

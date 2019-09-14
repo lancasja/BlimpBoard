@@ -10,7 +10,7 @@ Source :["A message from your Neighbors", "A warning from California People's Un
 let AdBoard = {
   ID: "Ad",
 Org: ["ChillCo", "StarMind", "DirtyDutyDepot","Slime.io" ,"RadCoin", "Fortitude, Inc." ],
-Products: ["Psychatropic gummies", "Co-living Pop-up Studio", "Cosmic Infrastructure", "AUtomated Wellness Service", "Personal Widge-Bot Army", "Mac-n-Sneeze"],
+Products: ["Psychatropic gummies", "Co-living Pop-up Studio", "Cosmic Infrastructure", "Automated Wellness Service", "Personal Widge-Bot Army", "Mac-n-Sneeze"],
 Tagline: ["Keep your future intact", "Same day drone delivery available", "Coming soon!", "It powers everything", "for all your data needs"],
 }
 
